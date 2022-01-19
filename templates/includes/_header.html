@@ -12,18 +12,20 @@
           <a class="navbar-item" href="{% url 'core:index' %}">
             <img src="{% static 'assets/images/logo.png' %}" alt="Logo" />
           </a>
-          <span class="navbar-burger" data-target="navbarMenuHeroA">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
         <div id="navbarMenuHeroA" class="navbar-menu">
           <div class="navbar-end">
-            <a class="navbar-item {% if request.path == home_url %} is-active {% endif %}" href="{% url 'core:index' %}">
+            <a class="navbar-item {% if request.path == home_url %} is-active {% endif %} "
+              href="{% url 'core:index' %}">
               Home
             </a>
-            <a class="navbar-item {% if request.path == record_url %} is-active {% endif %}" href="{% url 'core:record' %}"> Record </a>
+            <a class="navbar-item {% if request.path == record_url %} is-active {% endif %}"
+              href="{% url 'core:record' %}"> Record </a>
           </div>
         </div>
       </div>
